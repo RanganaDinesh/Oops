@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="./script.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Oops Handson</h1>
+    <h3>Q1.Create 2 objects - parent and child. Attach methods to parent and use those methods in child object using parents prototype</h3>
+    <pre>
+            // Parent object
+            var Parent = function() {};
+
+            Parent.prototype.greet = function() {
+            return "Hello from Parent";
+            };
+
+            Parent.prototype.sayGoodbye = function() {
+            return "Goodbye from Parent";
+            };
+
+            // Child object
+            var child = function() {};
+
+            // Inherit methods from Parent
+            child.prototype = Object.create(Parent.prototype);
+
+            // Use parent methods in Child
+            var child = new child();
+            console.log(child.greet());
+            console.log(child.sayGoodbye());
+</pre>
+    
+</body>
+</html>
